@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 5</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleTask2.css" />
+  </head>
+  <body>
+    <!-- task 1 -->
+    <div class="wrapper">
+      <form class="form" id="form">
+        <h3 class="form__title">Форма для заповнення</h3>
+        <div class="form__group" data-title="Формат: ТТТТТТ Т.Т.">
+          <input type="text" class="form__input" name="name" placeholder=" " />
+          <label class="form__label">ПІБ</label>
+        </div>
+        <div class="form__group" data-title="Формат: ТТ ЧЧЧЧЧЧ">
+          <input type="text" class="form__input" name="id" placeholder=" " />
+          <label class="form__label">ID-card</label>
+        </div>
+        <div class="form__group" data-title="Формат: ТТТТ">
+          <input
+            type="text"
+            class="form__input"
+            name="faculty"
+            placeholder=" "
+          />
+          <label class="form__label">Факультет</label>
+        </div>
+        <div class="form__group" data-title="Формат: ЧЧ.ЧЧ.ЧЧЧЧ">
+          <input type="text" class="form__input" name="birth" placeholder=" " />
+          <label class="form__label">Дата народження</label>
+        </div>
+        <div class="form__group" data-title="Формат: м. ЧЧЧЧЧЧ">
+          <input
+            type="text"
+            class="form__input"
+            name="address"
+            placeholder=" "
+          />
+          <label class="form__label">Адреса</label>
+        </div>
+        <button class="form__button">Підтвердити</button>
+      </form>
+      <div class="data">
+        <h3 class="data__title">Введені дані</h3>
+        <div class="data__content"></div>
+      </div>
+    </div>
+
+    <!-- task 2 -->
+    <div class="wrapper task2">
+      <table id="myTable" class="table"></table>
+      <div id="colorPicker" class="colorPicker">
+         <label for="colorInput">Enter color</label>
+         <input type="color" id="colorInput" class="inputColor">
+         <button id ="colorApplyButton" class="colorApplyButton">Apply</button>
+         <!-- <button onclick="applyCustomColor()">Apply</button> -->
+       </div>
+    </div>
+
+    <script src="/code.js"></script>
+    <script src="/codeTask2.js"></script>
+  </body>
+</html>

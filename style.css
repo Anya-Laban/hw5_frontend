@@ -1,0 +1,132 @@
+.wrapper{
+   display: flex;
+   gap: 20px;
+}
+
+.form {
+  width: 300px;
+  padding: 32px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px #ccc;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+}
+
+.form__input,
+.form__button {
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+.form__title {
+  text-align: center;
+  margin-bottom: 32px;
+  font-weight: normal;
+}
+
+.form__group {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.form__group:before {
+  display: block;
+  content: attr(data-title);
+  position: absolute;
+  padding: 3px;
+  border-radius: 2px;
+  background-color: rgb(249, 250, 251);
+  color: #9e9e9e;
+  top: -15px;
+  right: 0;
+  font-size: 10px;
+  opacity: 0;
+  transition: 0.3s;
+}
+.form__group:hover:before {
+  opacity: 1;
+}
+.form__label {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  color: #9e9e9e;
+  transition: 0.5s;
+}
+
+.form__label._error {
+  color: #950303;
+}
+
+.form__input {
+  width: 100%;
+  padding-bottom: 10px;
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: transparent;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form__input._error {
+  border-bottom: 1px solid #950303;
+}
+
+.form__input:focus {
+  border-bottom: 1px solid #1a73a8;
+}
+.form__button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  background-color: rgb(26, 115, 168);
+  color: white;
+  transition: 0.3s;
+}
+
+.form__button:focus,
+.form__button:hover {
+  background-color: rgb(26, 115, 168, 0.7);
+}
+
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown) ~ .form__label._error {
+  color: #950303;
+}
+
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown) ~ .form__label {
+  top: -18px;
+  font-size: 12px;
+  color: #e0e0e0;
+}
+
+.data{
+   flex: 1 1 auto;
+   width: 300px;
+   padding: 32px;
+   border-radius: 10px;
+   box-shadow: 0 4px 16px #ccc;
+   font-family: sans-serif;
+   letter-spacing: 1px;
+}
+
+.data__title{
+   text-align: center;
+   margin-bottom: 32px;
+   font-weight: normal;
+}
+
+.data__content {
+   display: flex;
+   width: 100%;
+   gap: 2.5%;
+   flex-wrap: wrap;
+}
+
+.data__element {
+   flex: 1 1 45%;
+}
